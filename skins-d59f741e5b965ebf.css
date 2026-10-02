@@ -1,0 +1,104 @@
+/* Skins: token overrides a document may name (feature 018,
+   contracts/theme.md). Colors and motif only; never fonts, --line,
+   --radius, or --tap. The client puts the name on the body while the
+   document shows, so the whole page takes the skin. */
+
+[data-skin] { background: var(--paper); background-image: var(--motif); color: var(--ink); }
+
+[data-skin="noir"] {
+  --paper: #171414;
+  --ink: #f3e9d2;
+  --ink-soft: #cdbfa5;
+  --card: #f3e9d2;
+  --card-ink: #1b1b1b;
+  --accent: #f3e9d2;
+  --accent-ink: #1b1b1b;
+  --accent-2: #c8102e;
+  --accent-2-ink: #f3e9d2;
+  --focus: #f3e9d2;
+  --heading-shadow: 2px 2px 0 #000000;
+  --shadow: 4px 4px 0 #6b0a1a;
+  --motif: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255, 255, 255, 0.025) 14px 16px);
+}
+
+/* feature 019: one skin per game, moods approved from mockups on 2026-10-01 */
+
+[data-skin="stage"] {
+  --paper: #1b1340;
+  --ink: #fff2c2;
+  --ink-soft: #d9ccb0;
+  --card: #2a1f5c;
+  --card-ink: #fff2c2;
+  --accent: #ffd23f;
+  --accent-ink: #1b1340;
+  --accent-2: #ff4f9a;
+  --accent-2-ink: #1b1340;
+  --good: #3ec27a;
+  --good-ink: #1b1340;
+  --bad: #ff6b6b;
+  --bad-ink: #1b1340;
+  --focus: #ffd23f;
+  --heading-shadow: 2px 2px 0 #0b0724;
+  --shadow: 4px 4px 0 #0b0724;
+  --motif: radial-gradient(ellipse at top, #35237a, transparent 70%);
+}
+
+[data-skin="arcade"] {
+  --paper: #0e1b2b;
+  --ink: #f4fbff;
+  --ink-soft: #bcd0e0;
+  --card: #ffffff;
+  --card-ink: #0e1b2b;
+  --accent: #19d3ff;
+  --accent-ink: #0e1b2b;
+  --accent-2: #ffe600;
+  --accent-2-ink: #0e1b2b;
+  --good: #3ec27a;
+  --good-ink: #0e1b2b;
+  --bad: #ff6b6b;
+  --bad-ink: #0e1b2b;
+  --focus: #19d3ff;
+  --heading-shadow: 2px 2px 0 #052033;
+  --shadow: 4px 4px 0 #052033;
+  --motif: repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.04) 18px 20px);
+}
+
+[data-skin="night"] {
+  --paper: #0f1a2e;
+  --ink: #dfe8ff;
+  --ink-soft: #aebbd6;
+  --card: #1c2a46;
+  --card-ink: #dfe8ff;
+  --accent: #9cc0ff;
+  --accent-ink: #0f1a2e;
+  --accent-2: #ff6b57;
+  --accent-2-ink: #0f1a2e;
+  --good: #3ec27a;
+  --good-ink: #0f1a2e;
+  --bad: #ff6b6b;
+  --bad-ink: #0f1a2e;
+  --focus: #dfe8ff;
+  --heading-shadow: 2px 2px 0 #060b16;
+  --shadow: 4px 4px 0 #060b16;
+  --motif: radial-gradient(circle at 85% 8%, #e9efff 0 18px, transparent 19px);
+}
+
+[data-skin="day"] {
+  --paper: #e9f1ff;
+  --ink: #1b2340;
+  --ink-soft: #4a5578;
+  --card: #ffffff;
+  --card-ink: #1b2340;
+  --accent: #2f6fde;
+  --accent-ink: #ffffff;
+  --accent-2: #ff6b57;
+  --accent-2-ink: #1b2340;
+  --good: #3ec27a;
+  --good-ink: #1b2340;
+  --bad: #ff6b6b;
+  --bad-ink: #1b2340;
+  --focus: #1b2340;
+  --heading-shadow: 2px 2px 0 #ffffff;
+  --shadow: 4px 4px 0 #1b2340;
+  --motif: none;
+}

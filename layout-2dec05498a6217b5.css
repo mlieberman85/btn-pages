@@ -1,0 +1,89 @@
+/* Arrangement (feature 018, contracts/view-language-additions.md):
+   regions stack and pin under 900 px; two columns from 900 px; the
+   host's TV mode scales the type and never pins. The page scrolls as
+   one; only a pinned region under its cap scrolls inside. */
+
+.doc { display: block; }
+.doc.two { display: flex; flex-direction: column; gap: var(--sp-3); }
+.col { display: contents; }
+.region { min-width: 0; }
+
+.region.pinned {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  max-height: 50vh;
+  overflow: auto;
+  background: var(--paper);
+  background-image: var(--motif);
+  padding-bottom: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+.region.pinned .sentence {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+  background-image: var(--motif);
+}
+
+.picker.all { display: none; }
+
+/* feature 019: a region pinned to the bottom of a phone, and fixed-column rows */
+.region.bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  max-height: 40vh;
+  overflow: auto;
+  background: var(--paper);
+  background-image: var(--motif);
+  border-top: var(--line) dashed var(--ink);
+  padding-top: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+.doc[data-both-pinned] .region.pinned, .doc[data-both-pinned] .region.bottom { max-height: 35vh; }
+.row.cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); }
+.row.cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.row.cols-4 { display: grid; grid-template-columns: repeat(4, 1fr); }
+.row[class*="cols-"] > * { width: auto; min-width: 0; min-height: var(--tap); white-space: normal; margin: 0; }
+
+@media (min-width: 900px) {
+  main { max-width: 1100px; }
+  .doc.two { display: grid; grid-template-columns: 1.15fr 1fr; align-items: start; }
+  .col { display: flex; flex-direction: column; gap: var(--sp-3); min-width: 0; }
+  .col.right { position: sticky; top: var(--sp-3); }
+  .region.pinned { position: static; max-height: none; overflow: visible; padding-bottom: 0; margin-bottom: 0; }
+  .region.pinned .sentence { position: static; }
+  .region.bottom { position: static; max-height: none; overflow: visible; border-top: 0; padding-top: 0; margin-top: 0; }
+  .picker { display: none; }
+  .picker.all { display: flex; }
+  .shelves { grid-template-columns: repeat(3, 1fr); align-items: start; }
+  .shelf-head { pointer-events: none; }
+  .shelf-head .chevron { display: none; }
+  .shelf[data-open="0"] .shelf-body { display: flex; }
+}
+
+.tv {
+  --fs-0: 1.1rem;
+  --fs-1: 1.25rem;
+  --fs-2: 1.6rem;
+  --fs-3: 2.2rem;
+  --fs-4: 2.8rem;
+  --fs-5: 4rem;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+.tv .col.right { position: static; }
+@media (min-width: 900px) {
+  .tv .doc.two { display: grid; grid-template-columns: 1.15fr 1fr; align-items: start; }
+  .tv .col { display: flex; flex-direction: column; gap: var(--sp-3); min-width: 0; }
+}
+.tv .region.pinned { position: static; max-height: none; overflow: visible; }
+.tv .region.pinned .sentence { position: static; }
+.tv .region.bottom { position: static; max-height: none; overflow: visible; border-top: 0; padding-top: 0; margin-top: 0; }
+.tv .prompt { font-size: var(--fs-4); }
+.tv .picker { display: none; }
+.tv .picker.all { display: flex; }
+.tv .grid .cell { min-height: 70px; }
+.tv .board-row, .tv .score-row { padding: var(--sp-3) var(--sp-4); }

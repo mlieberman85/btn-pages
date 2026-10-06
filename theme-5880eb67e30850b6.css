@@ -1,0 +1,114 @@
+/* The house style as data (feature 018, specs/018-house-style/contracts/theme.md).
+   Every other stylesheet refers to these tokens; scripts/check-theme.sh
+   enforces it. Swap this file for another token file to change the look. */
+
+@font-face {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/bangers-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("fonts/nunito-var.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Metric-matched fallbacks so a late font does not move a control. */
+@font-face {
+  font-family: "Bangers Fallback";
+  src: local("Impact"), local("Arial Narrow Bold"), local("Helvetica Neue Condensed Bold"), local("Arial Black");
+  size-adjust: 86%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Nunito Fallback";
+  src: local("Helvetica Neue"), local("Segoe UI"), local("Arial");
+  size-adjust: 101%;
+  ascent-override: 101%;
+  descent-override: 35%;
+  line-gap-override: 0%;
+}
+
+:root {
+  --paper: #ffd93d;
+  --card: #ffffff;
+  --card-ink: #1b1b1b;
+  --ink: #1b1b1b;
+  --ink-soft: #4a4a4a;
+  --accent: #1f5fe0;
+  --accent-ink: #ffffff;
+  --accent-2: #ff5c8a;
+  --accent-2-ink: #1b1b1b;
+  --good: #3ec27a;
+  --good-ink: #1b1b1b;
+  --bad: #ff6b6b;
+  --bad-ink: #1b1b1b;
+  --focus: #1b1b1b;
+  --heading-shadow: 2px 2px 0 #ffffff;
+  --font-display: "Bangers", "Bangers Fallback", Impact, sans-serif;
+  --font-body: "Nunito", "Nunito Fallback", "Helvetica Neue", Arial, sans-serif;
+  --fs-0: 0.8rem;
+  --fs-1: 0.9rem;
+  --fs-2: 1.125rem;
+  --fs-3: 1.4rem;
+  --fs-4: 1.9rem;
+  --fs-5: 2.6rem;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --radius: 10px;
+  --line: 3px;
+  --shadow: 4px 4px 0 var(--ink);
+  --motif: none;
+  --tap: 44px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17151f;
+    --card: #262335;
+    --card-ink: #fff4d6;
+    --ink: #fff4d6;
+    --ink-soft: #cfc7b8;
+    --accent: #6b9bff;
+    --accent-ink: #17151f;
+    --accent-2: #ff7aa8;
+    --accent-2-ink: #17151f;
+    --good: #3ec27a;
+    --good-ink: #17151f;
+    --bad: #ff6b6b;
+    --bad-ink: #17151f;
+    --focus: #fff4d6;
+    --heading-shadow: 2px 2px 0 #000000;
+    --font-display: "Bangers", "Bangers Fallback", Impact, sans-serif;
+    --font-body: "Nunito", "Nunito Fallback", "Helvetica Neue", Arial, sans-serif;
+    --fs-0: 0.8rem;
+    --fs-1: 0.9rem;
+    --fs-2: 1.125rem;
+    --fs-3: 1.4rem;
+    --fs-4: 1.9rem;
+    --fs-5: 2.6rem;
+    --sp-1: 0.25rem;
+    --sp-2: 0.5rem;
+    --sp-3: 0.75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.5rem;
+    --radius: 10px;
+    --line: 3px;
+    --shadow: 4px 4px 0 var(--ink);
+    --motif: none;
+    --tap: 44px;
+  }
+}

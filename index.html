@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>btn</title>
+    <link rel="stylesheet" href="/btn-pages/theme-5880eb67e30850b6.css" integrity="sha384-5olVO+OX+MumjiyE1uRRkIWQ4KtIRz6UbFwpbGGTtI05dmiJRmNHDlAxVrZdr3qW"/>
+    <link rel="stylesheet" href="/btn-pages/base-3b04de9b35ed37a4.css" integrity="sha384-D8+S+eYOSNz+NFk2bc6S7+0jnPRombv0yyHGrqQ51TU2BCI5SsKVl0I1Ektx1XeI"/>
+    <link rel="stylesheet" href="/btn-pages/elements-ef1f8a9871eea12b.css" integrity="sha384-gtAAfF7GuYW7AeO/FTpzsaNH3CxEZnE1jCXM8llcURYyXrcJ+YHNZowOmv9ugMvw"/>
+    <link rel="stylesheet" href="/btn-pages/layout-518c791fc0b48b0d.css" integrity="sha384-FlJnKNS4EcUabjEq/E3Y1LfZ+nhMR3FACKV44HWo52LWaGlgZTbYmFZsH2wzR/ZN"/>
+    <link rel="stylesheet" href="/btn-pages/pages-1240aadd27ec1448.css" integrity="sha384-UoSECf7B3nm7F4lq1cAvOCrWdhzoBOvTZKfHSgLaOTUDemOd5NGgk3b73MMMiMDi"/>
+    <link rel="stylesheet" href="/btn-pages/skins-d59f741e5b965ebf.css" integrity="sha384-wF5xVQWqEcQvN9WZHOe0cFaUTedCKOU/0PrXF2+cQxlrEkC6ydRex6U1rftnN7dt"/>
+    
+    
+    <script>window.btnRemote = () => import("./remote/btn_remote.4efbd5a4.js");</script>
+    
+<script type="module">
+import init, * as bindings from '/btn-pages/btn-client-4f67158eb2c4e1e.ea78b131.js';
+const wasm = await init({ module_or_path: '/btn-pages/btn-client-4f67158eb2c4e1e_bg.2935ff15.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/btn-pages/btn-client-4f67158eb2c4e1e.ea78b131.js" crossorigin="anonymous" integrity="sha384-oUDj9UBBi9l4Ra6u63Q/g8U7sJXk3icj08vZ/YLhSnjXXbFmYfh4OhWvNY0w6ia8"><link rel="preload" href="/btn-pages/btn-client-4f67158eb2c4e1e_bg.2935ff15.wasm" crossorigin="anonymous" integrity="sha384-j4Fho555K7jW5if2g3vJrqsEC2BGyOJird/5QDJNk66Fa83YmOyyXdNiJ99MoHG1" as="fetch" type="application/wasm"></head>
+  <body></body>
+</html>

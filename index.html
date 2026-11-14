@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>btn</title>
+    <link rel="stylesheet" href="/btn-pages/theme-5880eb67e30850b6.css" integrity="sha384-5olVO+OX+MumjiyE1uRRkIWQ4KtIRz6UbFwpbGGTtI05dmiJRmNHDlAxVrZdr3qW"/>
+    <link rel="stylesheet" href="/btn-pages/base-3b04de9b35ed37a4.css" integrity="sha384-D8+S+eYOSNz+NFk2bc6S7+0jnPRombv0yyHGrqQ51TU2BCI5SsKVl0I1Ektx1XeI"/>
+    <link rel="stylesheet" href="/btn-pages/elements-7bd334c181a2b16e.css" integrity="sha384-vusRyEsHLFyz7gL44Bs5L8ZQK+/by3vzpmDXvDjhJnxKyXjPqQ8WXwejiAAeonFh"/>
+    <link rel="stylesheet" href="/btn-pages/layout-a0e57ab203597ca5.css" integrity="sha384-xEMTOYKYcU3cY1hJ2jTmAHfFtO4ZDOfaoP8QNUUChTtqDILDxrTzq3UbVQFrT+Bh"/>
+    <link rel="stylesheet" href="/btn-pages/pages-cad402661fbc78c6.css" integrity="sha384-jqPnQaxN9AiMd3sm2UAMWYbLXvV2w6gP1zhiJipnO8x8e0mKtB/aNRzJ0Ghb6g7a"/>
+    <link rel="stylesheet" href="/btn-pages/skins-f5b7dba4be9229a1.css" integrity="sha384-bIFYws9QiFuP9YjTfjRI0bigiiZXLzdE5RhXPWKkGQ6jahhWRusLGJCR+RkeONrg"/>
+    
+    
+    <script>window.btnRemote = () => import("./remote/btn_remote.9c46d4dc.js");</script>
+    
+<script type="module">
+import init, * as bindings from '/btn-pages/btn-client-553183815a506ed2.470d7a62.js';
+const wasm = await init({ module_or_path: '/btn-pages/btn-client-967014705f9a8472_bg.25b3638b.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/btn-pages/btn-client-553183815a506ed2.470d7a62.js" crossorigin="anonymous" integrity="sha384-uJLDXb9H6Z8VpSngbq8GDvIpA8T/RnC+SLwgK9HOVmttmJuxzIYvYV7Ro2Gw5pgQ"><link rel="preload" href="/btn-pages/btn-client-967014705f9a8472_bg.25b3638b.wasm" crossorigin="anonymous" integrity="sha384-PLQUcQfXZD/WWY//nq9bMv6WnDZw4PGwPJ3UPZSGuVQI8rSAxH413orHWdIkrnc6" as="fetch" type="application/wasm"></head>
+  <body></body>
+</html>
